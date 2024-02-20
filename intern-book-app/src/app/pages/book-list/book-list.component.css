@@ -1,0 +1,21 @@
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+.book-form{
+    width: 500px;
+
+}
+.full-width{
+    width:90%;
+}
+.short-width{
+    width:50%;
+}
+.card-width{
+    margin:auto;
+    width: 95%;
+}
+.small-word{
+    font-size: 10px; 
+}
+.text-right{
+    margin: 0 0 0 auto;
+}
