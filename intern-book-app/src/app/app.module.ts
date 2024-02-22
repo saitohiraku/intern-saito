@@ -10,11 +10,13 @@ import { AppRoutingModule } from './app-routing.module';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
+import { ToolbarComponent } from './toolbar/toolbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BookListComponent
+    BookListComponent,
+    ToolbarComponent
   ],
   imports: [
     BrowserModule,
