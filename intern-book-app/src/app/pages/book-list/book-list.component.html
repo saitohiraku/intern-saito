@@ -35,22 +35,30 @@
  
 </mat-card>
 <br>
-<div *ngFor="let book of books">
-<mat-card class = "card-width"  >
-  <mat-card-content >
-    <mat-card-title >{{book.name}}</mat-card-title>
-    <p class="small-word">
-      {{book.detail}}<br>
-      {{book.evaluation}}
-    </p>
-  </mat-card-content>
-  <mat-card-actions align="end">
-    <button mat-raised-button color="warn">削除</button>
-  </mat-card-actions>
-  
-</mat-card>
-<br>
+
+<div *ngIf="books.length > 0; else noBooks">
+ <div *ngFor="let book of books">
+    <mat-card class = "card-width"  >
+      <mat-card-content >
+        <mat-card-title >{{book.name}}</mat-card-title>
+
+        <p class="small-word">
+          {{book.detail}}<br>
+          {{book.evaluation}}
+        </p>
+    
+      </mat-card-content>
+
+      <mat-card-actions align="end">
+        <button mat-raised-button color="warn">削除</button>
+      </mat-card-actions>
+   </mat-card><br>
+  </div>
 </div>
+
+<ng-template #noBooks>
+  <p class = "nodeta">データがありません</p>
+</ng-template>
     <!-- <mat-card-title >アンドロイドは電気羊の夢を見るか?</mat-card-title>
     <p class="small-word">
     第三次大戦後の未来、サンフランシスコを舞台に賞金稼ぎのリック・デッカードが、火星から逃亡してきた8体のアンドロイドを「処理」するというあらすじ<br>

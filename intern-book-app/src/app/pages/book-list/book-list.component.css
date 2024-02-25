@@ -19,3 +19,9 @@
 .text-right{
     margin: 0 0 0 auto;
 }
+.nodeta{
+    margin:auto;
+    width:95%;
+    font-size: 15px; 
+
+}
