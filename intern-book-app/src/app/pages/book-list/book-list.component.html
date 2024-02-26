@@ -34,24 +34,21 @@
   </mat-card-actions>
  
 </mat-card>
-<br>
-<p *ngFor="let book of books">
+
+<div *ngFor="let book of books">
   <mat-card class = "card-width" >
     <mat-card-content >
       <mat-card-title >{{book.name}}</mat-card-title>
       <p class="small-word">
         {{book.detail}}
       </p>
-
       <p class= "small-word">
         評価:{{book.evaluation}}点
       </p>
     </mat-card-content>
-
     <mat-card-actions align="end">
       <button mat-raised-button color="warn">削除</button>
     </mat-card-actions>
-  
   </mat-card>
-</p>  
+</div>  
    
