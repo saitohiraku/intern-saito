@@ -1,5 +1,7 @@
-import { Component, Output, EventEmitter } from '@angular/core';
-
+import { Component} from '@angular/core';
+import { NgFor} from '@angular/common';
+import { bookList } from '../../types/mock-book';
+import { Book } from '../../types/book';
 
 @Component({
   selector: 'app-book-list',
@@ -9,12 +11,6 @@ import { Component, Output, EventEmitter } from '@angular/core';
 
 
 export class BookListComponent {
-  bookTitle: string = ''; 
-  bookarasuji: string = ''; 
-  rate: number = 1; 
-  addBook() {
-    console.log('Adding book:', this.bookTitle, this.bookarasuji, this.rate);
-    
-  }
-
+ books = bookList;
 }
+
