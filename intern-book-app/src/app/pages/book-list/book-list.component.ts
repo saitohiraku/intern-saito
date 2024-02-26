@@ -1,5 +1,5 @@
-import { Component,} from '@angular/core';
-import { NgFor,} from '@angular/common';
+import { Component} from '@angular/core';
+import { NgFor} from '@angular/common';
 import { bookList } from '../../types/mock-book';
 import { Book } from '../../types/book';
 
@@ -12,5 +12,5 @@ import { Book } from '../../types/book';
 
 export class BookListComponent {
  books = bookList;
-  }
+}
 
