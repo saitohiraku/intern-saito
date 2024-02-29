@@ -11,6 +11,6 @@ import { Book } from '../../types/book';
 
 
 export class BookListComponent {
- books = bookList;
+  books :Book[] = bookList;
 }
 
