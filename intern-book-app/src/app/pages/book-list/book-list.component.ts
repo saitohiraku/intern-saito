@@ -12,5 +12,9 @@ import { Book } from '../../types/book';
 
 export class BookListComponent {
   books :Book[] = bookList;
+  newbook:Book= { name: "", detail: "", evaluation:0, };
+  addBook(){
+    this.books.push({ ...this.newbook });
+  }
 }
 
