@@ -10,10 +10,10 @@ import { Book } from '../../types/book';
 })
 
 export class CardComponent {
-  books = bookList;
-  @Input() book: Book[]= bookList;
-  @Input() bookname:string ='Book';
-  @Input() bookdetail:string ='Book';
-  @Input() bookevaluation:number =0;
+  @Input() bookcard:Book = {
+    name: "test",
+    detail:"test",
+    evaluation: 0
+  };
 }
 

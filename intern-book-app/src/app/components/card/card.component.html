@@ -1,47 +1,14 @@
-<mat-card class = "card-width">
+<mat-card class = "card-width"  >
   <mat-card-content >
-    <mat-card-title >書籍登録</mat-card-title>
-    <form class="book-form">
-      <mat-form-field class="full-width">
-        <mat-label>書籍名</mat-label>
-        <input matInput>
-      </mat-form-field>
-      <mat-form-field class="full-width">
-        <mat-label>あらすじ</mat-label>
-        <textarea matInput placeholder=" "></textarea>
-      </mat-form-field>
-      <mat-form-field class="short-width">
-        <mat-label>評価点</mat-label>
-        <input matInput>
-      </mat-form-field>
-    </form>
+    <mat-card-title >{{bookcard.name}}</mat-card-title>
+    <p class="small-word">
+      {{bookcard.detail}}
+    </p>
+    <p class="small-word">
+      評価:{{bookcard.evaluation}}点
+    </p>
   </mat-card-content>
   <mat-card-actions align="end">
-    <button mat-raised-button color="primary">追加</button>
+    <button mat-raised-button color="warn">削除</button>
   </mat-card-actions>
 </mat-card>
-
-<br>
-
-<div *ngIf="books.length > 0; else noBooks">
- <div *ngFor="let book of books">
-    <mat-card class = "card-width"  >
-      <mat-card-content >
-        <mat-card-title >{{book.name}}</mat-card-title>
-        <p class="small-word">
-          {{book.detail}}
-        </p>
-        <p class="small-word">
-          評価:{{book.evaluation}}点
-        </p>
-      </mat-card-content>
-      <mat-card-actions align="end">
-        <button mat-raised-button color="warn">削除</button>
-      </mat-card-actions>
-    </mat-card>
-  </div>
-</div>
-
-<ng-template #noBooks>
-  <p class = "nodeta">データがありません</p>
-</ng-template>
