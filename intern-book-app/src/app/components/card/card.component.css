@@ -1,0 +1,7 @@
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+.card-width{
+    margin:auto;
+    margin-bottom: 15px;
+    width: 95%;
+}

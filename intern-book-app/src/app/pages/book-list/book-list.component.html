@@ -20,28 +20,11 @@
     <button mat-raised-button color="primary">追加</button>
   </mat-card-actions>
 </mat-card>
-
-<br>
-
 <div *ngIf="books.length > 0; else noBooks">
- <div *ngFor="let book of books">
-    <mat-card class = "card-width"  >
-      <mat-card-content >
-        <mat-card-title >{{book.name}}</mat-card-title>
-        <p class="small-word">
-          {{book.detail}}
-        </p>
-        <p class="small-word">
-          評価:{{book.evaluation}}点
-        </p>
-      </mat-card-content>
-      <mat-card-actions align="end">
-        <button mat-raised-button color="warn">削除</button>
-      </mat-card-actions>
-    </mat-card>
+  <div *ngFor="let book of books">
+    <app-card [bookcard]="book"></app-card> 
   </div>
 </div>
-
 <ng-template #noBooks>
   <p class = "nodeta">データがありません</p>
 </ng-template>
