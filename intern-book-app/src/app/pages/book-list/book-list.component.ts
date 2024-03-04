@@ -10,9 +10,16 @@ import { Book } from '../../types/book';
 export class BookListComponent {
   books :Book[] = bookList;
   newbook:Book= { name: "", detail: "", evaluation:0, };
+
   addBook(){
     this.books.push({ ...this.newbook });
   }
-
+  DisaddBook(book:Book) {
+    //books配列でbookが最初に見つかった場所
+    const indexbook = this.books.indexOf(book);
+    if (indexbook !== -1) {
+      //削除する場所と数の指定
+      this.books.splice(indexbook, 1);
+    }
+  }
 }
-
