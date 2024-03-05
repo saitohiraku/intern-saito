@@ -1,7 +1,7 @@
 import { Component, Input} from '@angular/core';
 import { bookList } from '../../types/mock-book';
 import { Book } from '../../types/book';
-
+import { Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-card',
@@ -15,5 +15,10 @@ export class CardComponent {
     detail:"test",
     evaluation: 0
   };
+  @Output() deleteBookEvent = new EventEmitter<Book>();
+
+  deleteBook() {
+    this.deleteBookEvent.emit(this.bookcard);
+  }
 }
 
