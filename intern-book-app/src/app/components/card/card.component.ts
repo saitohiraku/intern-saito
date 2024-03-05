@@ -15,9 +15,10 @@ export class CardComponent {
     detail:"test",
     evaluation: 0
   };
-  @Output() trashcard = new EventEmitter<void>();
-  disaddBook() {
-    this.trashcard.emit();
+  @Output() deleteBookEvent = new EventEmitter<Book>();
+
+  deleteBook() {
+    this.deleteBookEvent.emit(this.bookcard);
   }
 }
 

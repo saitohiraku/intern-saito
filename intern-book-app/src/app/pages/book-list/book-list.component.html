@@ -22,7 +22,7 @@
 </mat-card>
 <div *ngIf="books.length > 0; else noBooks">
   <div *ngFor="let book of books">
-    <app-card [bookcard]="book"(trashcard)="DisaddBook(book)"></app-card> 
+    <app-card [bookcard]="book"(deleteBookEvent)="deleteBook(book)"></app-card> 
   </div>
 </div>
 <ng-template #noBooks>

@@ -14,7 +14,7 @@ export class BookListComponent {
   addBook(){
     this.books.push({ ...this.newbook });
   }
-  DisaddBook(book:Book) {
+  deleteBook(book:Book) {
     //books配列でbookが最初に見つかった場所
     const indexbook = this.books.indexOf(book);
     if (indexbook !== -1) {
