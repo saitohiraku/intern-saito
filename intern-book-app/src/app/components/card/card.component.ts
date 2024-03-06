@@ -28,7 +28,7 @@ export class CardComponent {
 
     dialogRef.afterClosed().subscribe(result => {
       if (result === true) {
-        this.deleteBookEvent.emit(this.bookcard);
+          this.deleteBookEvent.emit(this.bookcard);
       }
     });
   }

@@ -13,6 +13,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { CardComponent, Dialog } from './components/card/card.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatDialogRef } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatToolbarModule,
     MatInputModule,
     MatButtonModule,
-    MatDialogModule
+    MatDialogModule,
   ],
   providers: [
     provideAnimationsAsync()
