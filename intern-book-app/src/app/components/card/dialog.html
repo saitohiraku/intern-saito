@@ -1,0 +1,7 @@
+<mat-dialog-content>
+    本当に削除しますか？
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button (click)="cancel()">いいえ</button>
+    <button mat-button [mat-dialog-close] = "true"cdkFocusInitial>はい</button>
+</mat-dialog-actions>
