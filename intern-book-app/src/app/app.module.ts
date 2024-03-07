@@ -11,14 +11,17 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
-import { CardComponent } from './components/card/card.component';
+import { CardComponent, Dialog } from './components/card/card.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatDialogRef } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
     AppComponent,
     BookListComponent,
     ToolbarComponent,
-    CardComponent
+    CardComponent,
+    Dialog
   ],
   imports: [
     BrowserModule,
@@ -28,7 +31,8 @@ import { CardComponent } from './components/card/card.component';
     AppRoutingModule,
     MatToolbarModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDialogModule,
   ],
   providers: [
     provideAnimationsAsync()
