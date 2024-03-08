@@ -14,6 +14,8 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { CardComponent, Dialog } from './components/card/card.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatDialogRef } from '@angular/material/dialog';
+import { MessagesComponent } from './components/messages/messages.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -21,9 +23,11 @@ import { MatDialogRef } from '@angular/material/dialog';
     BookListComponent,
     ToolbarComponent,
     CardComponent,
-    Dialog
+    Dialog,
+    MessagesComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     MatCardModule,
     MatFormFieldModule,

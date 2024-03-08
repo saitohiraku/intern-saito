@@ -1,6 +1,7 @@
 import { Component} from '@angular/core';
 import { bookList } from '../../types/mock-book';
 import { Book } from '../../types/book';
+import { MessageService } from '../../message.service';
 
 @Component({
   selector: 'app-book-list',
@@ -10,9 +11,10 @@ import { Book } from '../../types/book';
 export class BookListComponent {
   books :Book[] = bookList;
   newbook:Book= { name: "", detail: "", evaluation:0, };
-
+  constructor(private messageService: MessageService) {}
   addBook(){
     this.books.push({ ...this.newbook });
+    this.messageService.add('書籍が追加されました。');
   }
   deleteBook(book:Book) {
     //books配列でbookが最初に見つかった場所
