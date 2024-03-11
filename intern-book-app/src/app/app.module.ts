@@ -11,7 +11,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
-import { CardComponent, Dialog } from './components/card/card.component';
+import { CardComponent } from './components/card/card.component';
+import { DialogComponent } from './components/dialog/dialog.component'; 
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatDialogRef } from '@angular/material/dialog';
 import { MessagesComponent } from './components/messages/messages.component';
@@ -23,7 +24,7 @@ import { CommonModule } from '@angular/common';
     BookListComponent,
     ToolbarComponent,
     CardComponent,
-    Dialog,
+    DialogComponent,
     MessagesComponent
   ],
   imports: [

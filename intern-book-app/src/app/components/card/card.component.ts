@@ -4,6 +4,7 @@ import { Book } from '../../types/book';
 import { Output, EventEmitter } from '@angular/core';
 import { MatDialog,MatDialogRef } from '@angular/material/dialog';
 import {MatButtonModule} from '@angular/material/button';
+import { DialogComponent } from '../dialog/dialog.component';
 
 @Component({
   selector: 'app-card',
@@ -22,28 +23,14 @@ export class CardComponent {
   constructor(public dialog: MatDialog) {}
 
   deleteBook(): void {
-    const dialogRef = this.dialog.open(Dialog, {
+    const dialogRef = this.dialog.open(DialogComponent, {
       width: '250px',
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      if (result === true) {
-          this.deleteBookEvent.emit(this.bookcard);
+      if (result) {
+        this.deleteBookEvent.emit(this.bookcard);
       }
     });
   }
 }
-
-  @Component({
-    selector: 'app-dialog',
-    templateUrl: './dialog.html'
-  })
-
-  export class Dialog {
-    constructor(public dialogRef: MatDialogRef<Dialog>) {}
-    cancel(): void {
-      this.dialogRef.close();
-    }
-  }
-  
-  
